@@ -17,6 +17,7 @@ let returnThirdIndex = function (array) {
 //Exercice 4 : Changer le 2ème élément du tableau languages par php.', function() {
 let changeSecondElement = function (array) {
   array.splice(1, 1, 'php');
+  // array[1] = 'php' --(autre solution)-- \\
   return array ;
 }
 
@@ -34,7 +35,7 @@ let addAtFirst = function (array) {
 
 //Exercice 7 : Supprimer le premier élément du tableau languages.', function() {
 let removeFirstElement = function (array) {
-  array.shift(0)
+  array.shift('html');
   return array ;
 }
 
@@ -60,15 +61,15 @@ let returnName = function (array) {
 
 //Exercice 11 : Stocker tous les index du tableau person dans des variables séparées et les retourner dans une même phrase de type : "Bonjour, je suis Jean. J\'ai 45 ans et j\'habite Paris."', function() {
 let returnSentence = function (array) {
-  let name=array['name'] = 'Jean';
-  let age=array['age'] = 45;
-  let city=array['city'] = 'Paris';
-  return ;
+   let name = array['name'];
+   let age = array['age'];
+   let city = array['city'];
+  return `Bonjour, je suis ${name}. J'ai ${age} ans et j'habite ${city}.`;
 }
 
 //Exercice 12 : Transformer la variable string en tableau.', function() {
 let returnArray = function (string) {
-  return 'A compléter';
+  return string.split(',');
 }
 
 //Exercice 13 : Trier le tableau array.', function() {
@@ -78,5 +79,6 @@ let sortArray = function (array) {
 
 //Exercice 14 : Transformer le tableau array en chaîne de caractères', function() {
 let returnString = function (array) {
-  return array.toString();
+  return array.toString()
+  //array.join() pour demander une séparation !!!
 }
